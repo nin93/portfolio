@@ -1,22 +1,28 @@
 import { ReactNode } from "react";
 
-export type LinkProps = {
+import Link from "next/link";
+
+export type DownloadLinkProps = {
   href: string;
   children: ReactNode;
-  icon?: ReactNode;
   className?: string;
-  external?: boolean;
+  filename: string;
 };
 
-export default function Link({ children, href, className, icon }: LinkProps) {
+export default function ResourceLink({
+  href,
+  className,
+  filename,
+  children,
+}: DownloadLinkProps) {
   return (
-    <a
+    <Link
       href={href}
       className={`${className} focus-within:text-foreground-dark text-muted-foreground-dark hover:text-foreground-dark transition-colors`}
+      download={filename}
       target="_blank"
     >
       {children}
-      {icon}
-    </a>
+    </Link>
   );
 }

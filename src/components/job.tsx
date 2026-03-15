@@ -1,7 +1,7 @@
 import H3 from "./h3";
 import Paragraph from "./paragraph";
 
-export type WorkingExperienceProps = {
+export type JobProps = {
   role: string;
   company: string;
   start: string;
@@ -10,14 +10,14 @@ export type WorkingExperienceProps = {
   className?: string;
 };
 
-export default function WorkingExperience({
+export default function Job({
   role,
   company,
   location,
   start,
   finish,
   className,
-}: WorkingExperienceProps) {
+}: JobProps) {
   return (
     <div className={className}>
       <H3>
@@ -28,7 +28,7 @@ export default function WorkingExperience({
         <Paragraph>{location}</Paragraph>
 
         <span className="text-muted-foreground-dark text-sm md:text-base">
-          {start} - {finish || "present"}
+          {start} ~ {finish || "present"}
         </span>
       </div>
     </div>

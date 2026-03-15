@@ -28,7 +28,7 @@ export default function Header(props: HeaderProps) {
 
   return (
     <header
-      className={`flex justify-between text-sm md:text-base ${props.className}`}
+      className={`m-0 flex justify-between py-6 text-sm md:text-base ${props.className}`}
     >
       <nav className="flex gap-x-6 lg:gap-x-10">
         {PATHS.map(({ href, label }) => {
@@ -37,7 +37,7 @@ export default function Header(props: HeaderProps) {
           return (
             <Link
               href={href}
-              key={label}
+              key={`nav_${label}`}
               className={`focus-within:text-foreground-dark hover:text-foreground-dark transition-colors ${isActive ? "text-foreground-dark" : "text-muted-foreground-dark"}`}
             >
               {label}
