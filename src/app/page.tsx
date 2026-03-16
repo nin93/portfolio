@@ -77,11 +77,11 @@ function Info() {
 export default function Home() {
   return (
     <>
-      <div className="flex min-h-[calc(100vh-65px)] flex-col justify-center space-y-8 pb-32">
+      <div className="flex min-h-[calc(100vh-65px)] flex-col justify-center space-y-8 pb-12">
         <Info />
       </div>
 
-      <div className="border-muted-background-dark space-y-8 border-t py-8">
+      <div className="border-muted-background-dark space-y-8 border-t pt-8 pb-24">
         <H2>Working Experience</H2>
 
         {JOBS.map((props, i) => (
