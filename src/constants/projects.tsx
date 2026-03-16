@@ -1,6 +1,8 @@
 import { ProjectProps } from "@/components/project";
 
+import Cloudflare from "@/icons/cloudflare.svg";
 import Crystal from "@/icons/crystal.svg";
+import Gem from "@/icons/gem.svg";
 import Qwik from "@/icons/qwik.svg";
 import Tailwindcss from "@/icons/tailwindcss.svg";
 import TypeScript from "@/icons/typescript.svg";
@@ -25,6 +27,10 @@ export const PROJECTS: ProjectProps[] = [
         label: "TailwindCSS",
         icon: <Tailwindcss />,
       },
+      {
+        label: "Cloudflare",
+        icon: <Cloudflare />,
+      },
     ],
     src: "/assets/projects/stateofneptune-com-img.png",
   },
@@ -38,6 +44,10 @@ export const PROJECTS: ProjectProps[] = [
         label: "Crystal",
         icon: <Crystal />,
       },
+      {
+        label: "Shards",
+        icon: <Gem />,
+      },
     ],
     src: "/assets/projects/alea-img.png",
   },
@@ -50,6 +60,10 @@ export const PROJECTS: ProjectProps[] = [
       {
         label: "Crystal",
         icon: <Crystal />,
+      },
+      {
+        label: "Shards",
+        icon: <Gem />,
       },
     ],
     src: "/assets/projects/talgene-img.png",

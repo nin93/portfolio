@@ -7,7 +7,7 @@ import Link from "./link";
 import H3 from "./typography/h3";
 import Filled from "./ui/filled";
 
-import Github from "@/icons/github.svg";
+import Git from "@/icons/git.svg";
 import Globe from "@/icons/globe.svg";
 
 export type ProjectTechProps = {
@@ -35,6 +35,10 @@ export default function Project({
   tech,
   className,
 }: ProjectProps) {
+  const externalPathname = externalLink
+    ? URL.parse(externalLink)?.hostname
+    : null;
+
   return (
     <div className={`${className} space-y-4`}>
       <H3>{title}</H3>
@@ -52,25 +56,27 @@ export default function Project({
       <div className="flex flex-wrap gap-2">
         {tech.map((tech, i) => (
           <Filled key={`project_${title}_tech_${i}`}>
-            <span className="fill-foreground-dark w-3">{tech.icon}</span>
+            <span className="fill-foreground-dark w-3 md:w-3.5">
+              {tech.icon}
+            </span>
             {tech.label}
           </Filled>
         ))}
       </div>
 
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2 md:gap-4">
         <Link href={href} className="text-xs md:text-base" external>
           <Filled interactive>
-            <Github className="fill-foreground-dark w-3" />
+            <Git className="fill-foreground-dark w-3 md:w-3.5" />
             Source code
           </Filled>
         </Link>
 
-        {externalLink ? (
+        {externalLink && externalPathname ? (
           <Link href={externalLink} className="text-xs md:text-base" external>
             <Filled interactive>
-              <Globe className="fill-foreground-dark w-3" />
-              Site
+              <Globe className="fill-foreground-dark w-3 md:w-3.5" />
+              {externalPathname}
             </Filled>
           </Link>
         ) : (
