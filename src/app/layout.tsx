@@ -24,25 +24,25 @@ export default function RootLayout({
       <body
         className={`${FONT_SERIF.variable} ${FONT_SANS.variable} ${FONT_MONO.variable} bg-deep-black text-foreground-dark font-mono transition-colors`}
       >
-        <div className="flex w-full flex-col justify-between">
-          <WithCanvas
-            canvas={
-              <>
-                <DitheringCanvas
-                  className="h-full"
-                  colorBack="#0d0f00"
-                  colorFront="#770b03"
-                />
-              </>
-            }
-          >
+        <WithCanvas
+          canvas={
+            <>
+              <DitheringCanvas
+                className="h-full"
+                colorBack="#0d0f00"
+                colorFront="#770b03"
+              />
+            </>
+          }
+        >
+          <div className="flex flex-col justify-between">
             <Header />
 
             <main>{children}</main>
-          </WithCanvas>
 
-          <Footer />
-        </div>
+            <Footer />
+          </div>
+        </WithCanvas>
       </body>
     </html>
   );
