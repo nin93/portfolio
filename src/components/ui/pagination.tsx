@@ -51,7 +51,7 @@ export default function Pagination({
 
       <div className="flex items-center gap-6 md:gap-8">
         {hasLeftEllipsis ? (
-          <Ellipsis size={12} className="text-muted-foreground-dark" />
+          <Ellipsis size={10} className="text-muted-foreground-dark" />
         ) : (
           <></>
         )}
@@ -77,7 +77,7 @@ export default function Pagination({
         )}
 
         {hasRightEllipsis ? (
-          <Ellipsis size={14} className="text-muted-foreground-dark" />
+          <Ellipsis size={10} className="text-muted-foreground-dark" />
         ) : (
           <></>
         )}
