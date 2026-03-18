@@ -20,7 +20,7 @@ export default function Link({
   return (
     <LinkNext
       href={href}
-      className={`${className} focus-within:text-foreground-dark text-muted-foreground-dark hover:text-foreground-dark transition-colors`}
+      className={`${className} focus-within:fill-foreground-dark fill-muted-foreground-dark hover:fill-foreground-dark focus-within:text-foreground-dark text-muted-foreground-dark hover:text-foreground-dark transition-colors`}
       target={external ? "_blank" : "_self"}
     >
       {children}
