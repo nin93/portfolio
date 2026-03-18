@@ -36,10 +36,12 @@ export default function RootLayout({
             </>
           }
         >
-          <div className="flex flex-col justify-between">
-            <Header />
+          <div className="flex min-h-screen flex-col justify-between">
+            <div className="mb-18">
+              <Header />
 
-            <main>{children}</main>
+              <main>{children}</main>
+            </div>
 
             <Footer />
           </div>

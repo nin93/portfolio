@@ -18,17 +18,15 @@ export default function PaginatedList({
 }: PaginatedListProps) {
   return (
     <>
-      <div className="my-8 flex flex-col space-y-8">
-        <H2>{title}</H2>
+      <div className="mt-12 flex h-full flex-col justify-between space-y-8">
+        <div className="space-y-8">
+          <H2>{title}</H2>
 
-        {children}
+          {children}
+        </div>
+
+        <Pagination currentPage={currentPage} totalPages={totalPages} />
       </div>
-
-      <Pagination
-        className="py-8"
-        currentPage={currentPage}
-        totalPages={totalPages}
-      />
     </>
   );
 }
