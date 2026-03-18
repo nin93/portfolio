@@ -24,7 +24,7 @@ export default function Photograph({
 
       <Image
         className="w-full"
-        unoptimized
+        quality={100}
         width={512}
         height={288}
         src={src}
