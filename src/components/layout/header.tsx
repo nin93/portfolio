@@ -4,31 +4,27 @@ import { usePathname } from "next/navigation";
 
 import Link from "next/link";
 
-export type HeaderProps = {
-  className?: string;
-};
-
 const PATHS = [
   {
     href: "/",
-    label: "Home",
+    label: ".me",
   },
   {
     href: "/projects",
-    label: "Projects",
+    label: ".projects",
   },
   {
     href: "/photography",
-    label: "Photography",
+    label: ".photography",
   },
 ];
 
-export default function Header(props: HeaderProps) {
+export default function Header() {
   const currentPath = usePathname();
 
   return (
     <header
-      className={`m-0 flex w-full justify-between py-6 text-sm md:text-base ${props.className}`}
+      className={`bg-deep-black sticky top-0 z-10 m-0 flex w-full justify-between py-6 text-sm md:text-base`}
     >
       <nav className="flex gap-x-6 lg:gap-x-10">
         {PATHS.map(({ href, label }) => {
