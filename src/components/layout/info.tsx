@@ -1,9 +1,13 @@
-import { Link, Github, Linkedin, Download } from "lucide-react";
 import Em from "@/components/typography/em";
 import H1 from "@/components/typography/h1";
 import Paragraph from "@/components/typography/paragraph";
 import DownloadLink from "@/components/ui/download-link";
 import Filled from "@/components/ui/filled";
+import Link from "@/components/ui/link";
+
+import Download from "@/icons/download.svg";
+import Github from "@/icons/github.svg";
+import Linkedin from "@/icons/linkedin.svg";
 
 export default function Info() {
   return (
@@ -22,12 +26,12 @@ export default function Info() {
           computing in the C programming language. Over the course of the years
           I worked in distributed and even-driven environments, building up my
           knowledge in back-end systems <Em /> now I&apos;m leaning into
-          full-stack development, with an eye over security.
+          full-stack development, with an eye to security.
         </Paragraph>
 
         <Paragraph>
-          I like to play with noise and randomness <Em /> as a programmer, as a
-          musician and as a photographer.
+          I like to play with noise and randomness in my programming, in my
+          music and in my photography.
         </Paragraph>
 
         <Paragraph>
