@@ -32,7 +32,7 @@ export const PROJECTS: ProjectProps[] = [
         icon: <Cloudflare />,
       },
     ],
-    src: "/assets/projects/stateofneptune-com-img.png",
+    src: "/images/projects/stateofneptune-com-img.png",
   },
   {
     title: "Alea",
@@ -49,7 +49,7 @@ export const PROJECTS: ProjectProps[] = [
         icon: <Gem />,
       },
     ],
-    src: "/assets/projects/alea-img.png",
+    src: "/images/projects/alea-img.png",
   },
   {
     title: "Talgene",
@@ -66,6 +66,6 @@ export const PROJECTS: ProjectProps[] = [
         icon: <Gem />,
       },
     ],
-    src: "/assets/projects/talgene-img.png",
+    src: "/images/projects/talgene-img.png",
   },
 ];
