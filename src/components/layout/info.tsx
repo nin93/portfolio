@@ -64,7 +64,7 @@ export default function Info() {
         {"/"}
 
         <DownloadLink
-          href="resume/elia_franzella_cv_202603_en.pdf"
+          href="/resume/elia_franzella_cv_202603_en.pdf"
           filename="elia_franzella_cv_202603_en.pdf"
         >
           <Filled interactive>
