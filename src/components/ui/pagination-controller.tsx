@@ -1,42 +1,19 @@
-"use client";
-
 import { ChevronLeft, ChevronRight, Ellipsis } from "lucide-react";
 
 import Link from "@/components/ui/link";
+import PaginationControllerButton from "@/components/ui/pagination-controller-button";
 
-export type PaginationProps = {
+export type PaginationControllerProps = {
   className?: string;
   totalPages: number;
   currentPage: number;
 };
 
-type PaginationButtonProps = {
-  href: string;
-};
-
-function PaginationPrevious({ href }: PaginationButtonProps) {
-  return (
-    <Link href={href} className="flex items-center gap-1 p-2 text-sm">
-      <ChevronLeft className="w-3 md:w-4" />
-      Prev
-    </Link>
-  );
-}
-
-function PaginationNext({ href }: PaginationButtonProps) {
-  return (
-    <Link href={href} className="flex items-center gap-1 p-2 text-sm">
-      Next
-      <ChevronRight className="w-3 md:w-4" />
-    </Link>
-  );
-}
-
-export default function Pagination({
+export default function PaginationController({
   className,
   currentPage,
   totalPages,
-}: PaginationProps) {
+}: PaginationControllerProps) {
   const hasLeftEllipsis = currentPage > 2;
   const hasRightEllipsis = currentPage < totalPages - 1;
 
@@ -47,7 +24,12 @@ export default function Pagination({
     <div
       className={`${className} flex w-full items-center justify-center gap-4 md:gap-8`}
     >
-      <PaginationPrevious href={`?page=${Math.max(1, currentPage - 1)}`} />
+      <PaginationControllerButton
+        href={`?page=${Math.max(1, currentPage - 1)}`}
+      >
+        <ChevronLeft className="w-3 md:w-4" />
+        Prev
+      </PaginationControllerButton>
 
       <div className="flex items-center gap-2 md:gap-4">
         {hasLeftEllipsis ? (
@@ -87,7 +69,12 @@ export default function Pagination({
         )}
       </div>
 
-      <PaginationNext href={`?page=${Math.min(currentPage + 1, totalPages)}`} />
+      <PaginationControllerButton
+        href={`?page=${Math.min(currentPage + 1, totalPages)}`}
+      >
+        Next
+        <ChevronRight className="w-3 md:w-4" />
+      </PaginationControllerButton>
     </div>
   );
 }

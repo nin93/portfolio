@@ -1,30 +1,20 @@
-"use client";
+import { Suspense } from "react";
 
-import PaginatedList from "@/components/layout/paginated-list";
-import ProjectList from "@/components/layout/project-list";
-
-import { PROJECTS } from "@/app/projects/constants/projects";
-
-import usePage from "@/hooks/use-page";
+import ProjectsPage from "@/components/layout/projects-page";
+import H2 from "@/components/typography/h2";
 
 const PROJECTS_PER_PAGE = 2;
-const totalPages = Math.ceil(PROJECTS.length / PROJECTS_PER_PAGE);
 
 export default function Projects() {
-  const currentPage = usePage(totalPages);
-  const offset = PROJECTS_PER_PAGE * (currentPage - 1);
-
-  const projects = PROJECTS.slice(offset, offset + PROJECTS_PER_PAGE);
-
   return (
-    <>
-      <PaginatedList
-        title="Projects"
-        currentPage={currentPage}
-        totalPages={totalPages}
-      >
-        <ProjectList projects={projects} />
-      </PaginatedList>
-    </>
+    <div className="mt-12 flex h-full flex-col justify-between space-y-8">
+      <div className="space-y-8">
+        <H2>Projects</H2>
+
+        <Suspense>
+          <ProjectsPage perPage={PROJECTS_PER_PAGE} />
+        </Suspense>
+      </div>
+    </div>
   );
 }
