@@ -1,30 +1,17 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-
 import Link from "next/link";
 
-const PATHS = [
-  {
-    href: "/",
-    label: ".me",
-  },
-  {
-    href: "/projects",
-    label: ".projects",
-  },
-  {
-    href: "/photography",
-    label: ".photography",
-  },
-];
+import { usePathname } from "next/navigation";
+
+import { NAV_PATHS } from "@/constants/nav-paths";
 
 export default function Nav() {
   const currentPath = usePathname();
 
   return (
     <nav className="flex gap-x-6 lg:gap-x-10">
-      {PATHS.map(({ href, label }) => (
+      {NAV_PATHS.map(({ href, label }) => (
         <Link
           href={href}
           key={`nav_${label}`}
