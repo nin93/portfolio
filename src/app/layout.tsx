@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { ViewTransition, type ReactNode } from "react";
 
 import Footer from "@/components/layout/footer";
 
@@ -39,7 +39,9 @@ export default function RootLayout({
             <div className="mb-18">
               <Header />
 
-              <main>{children}</main>
+              <ViewTransition>
+                <main>{children}</main>
+              </ViewTransition>
             </div>
 
             <Footer />
