@@ -12,7 +12,14 @@ export const JOBS: JobProps[] = [
     location: "Italy, Palermo (PA)",
     role: "Backend Developer",
     company: "Manpower",
-    start: "04/2021",
+    start: "06/2021",
     finish: "01/2022",
+  },
+  {
+    location: "Italy, Palermo (PA)",
+    role: "Internship",
+    company: "Manpower",
+    start: "04/2021",
+    finish: "06/2021",
   },
 ];
