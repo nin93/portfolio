@@ -33,7 +33,7 @@ export default function PhotographPreview({
       </button>
 
       <Image
-        className={`${!isLoaded ? "w-0" : ""} m-auto`}
+        className={`${!isLoaded ? "w-0 opacity-0" : "opacity-100"} m-auto transition-opacity`}
         onLoad={() => setIsLoaded(true)}
         quality={100}
         width={1440}
