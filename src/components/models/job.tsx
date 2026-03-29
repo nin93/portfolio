@@ -28,7 +28,7 @@ export default function Job({
         <Paragraph>{location}</Paragraph>
 
         <span className="text-foreground-muted text-sm md:text-base">
-          {start} ~ {finish || "present"}
+          {start}..{finish || "present"}
         </span>
       </div>
     </div>
