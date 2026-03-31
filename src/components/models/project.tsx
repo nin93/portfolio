@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, startTransition, useState } from "react";
 
 import Image from "next/image";
 
@@ -35,6 +35,8 @@ export default function Project({
   tech,
   className,
 }: ProjectProps) {
+  const [isLoadedImage, setIsLoadedImage] = useState(false);
+
   const externalPathname = externalLink
     ? URL.parse(externalLink)?.hostname
     : null;
@@ -44,7 +46,8 @@ export default function Project({
       <H3>{title}</H3>
 
       <Image
-        className="aspect-3/2 w-full object-cover"
+        className={`${isLoadedImage ? "opacity-100" : "opacity-0"} aspect-3/2 w-full object-cover`}
+        onLoad={() => startTransition(() => setIsLoadedImage(true))}
         width={544}
         height={363}
         src={src}

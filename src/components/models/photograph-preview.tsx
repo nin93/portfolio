@@ -17,7 +17,7 @@ export default function PhotographPreview({
   alt,
   onClick,
 }: PhotographPreviewProps) {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoadedImage, setIsLoadedImage] = useState(false);
 
   return (
     <dialog
@@ -33,8 +33,8 @@ export default function PhotographPreview({
       </button>
 
       <Image
-        className={`${!isLoaded ? "w-0 opacity-0" : "opacity-100"} m-auto transition-opacity`}
-        onLoad={() => setIsLoaded(true)}
+        className={`${!isLoadedImage ? "w-0 opacity-0" : "opacity-100"} m-auto transition-opacity`}
+        onLoad={() => setIsLoadedImage(true)}
         quality={100}
         width={1440}
         height={0}
@@ -42,7 +42,7 @@ export default function PhotographPreview({
         alt={alt}
       />
 
-      {!isLoaded ? (
+      {!isLoadedImage ? (
         <span className="flex grow justify-center">
           <Ring className="fill-foreground-muted w-8" />
         </span>

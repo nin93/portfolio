@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, startTransition } from "react";
 
 import Image from "next/image";
 
@@ -23,20 +23,17 @@ export default function Photograph({
   medium,
   date,
 }: PhotographProps) {
+  const [isLoadedImage, setIsLoadedImage] = useState(false);
   const [isOpenPreview, setIsOpenPreview] = useState(false);
 
   return (
     <div className={`${className} space-y-4`}>
       <H3>{title}</H3>
 
-      <div
-        className="group relative"
-        onClick={() => {
-          setIsOpenPreview(true);
-        }}
-      >
+      <div className="group relative" onClick={() => setIsOpenPreview(true)}>
         <Image
-          className="aspect-3/2 w-full cursor-pointer object-cover"
+          className={`${isLoadedImage ? "opacity-100" : "opacity-0"} aspect-3/2 w-full cursor-pointer object-cover`}
+          onLoad={() => startTransition(() => setIsLoadedImage(true))}
           width={544}
           height={363}
           quality={100}
