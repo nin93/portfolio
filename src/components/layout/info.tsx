@@ -38,7 +38,7 @@ export default function Info() {
           Feel free to reach out to me at{" "}
           <Link
             href="mailto:franzella.elia@gmail.com"
-            className="text-foreground-strong underline-offset-2 hover:underline"
+            className="text-foreground-strong hover:text-foreground-strong underline-offset-2 hover:underline"
           >
             franzella.elia@gmail.com
           </Link>
