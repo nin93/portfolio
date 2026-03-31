@@ -8,7 +8,7 @@ import { JOBS } from "@/constants/jobs";
 export default function Me() {
   return (
     <>
-      <section className="flex min-h-[calc(100vh-65px)] flex-col justify-center space-y-8 pb-14">
+      <section className="flex min-h-[calc(100vh-65px)] flex-col justify-center space-y-8 pt-12 pb-26">
         <Info />
       </section>
 
