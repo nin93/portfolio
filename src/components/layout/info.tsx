@@ -1,7 +1,6 @@
 import Em from "@/components/typography/em";
 import H1 from "@/components/typography/h1";
 import Paragraph from "@/components/typography/paragraph";
-import DownloadLink from "@/components/ui/download-link";
 import Filled from "@/components/ui/filled";
 import Link from "@/components/ui/link";
 
@@ -63,15 +62,12 @@ export default function Info() {
 
         {"/"}
 
-        <DownloadLink
-          href="/resume/elia_franzella_cv_202603_en.pdf"
-          filename="elia_franzella_cv_202603_en.pdf"
-        >
+        <Link href="https://nin93.github.io/curriculum_vitae/elia_franzella_cv_dev.pdf">
           <Filled interactive>
             <Download className="fill-foreground w-3" />
             Download CV
           </Filled>
-        </DownloadLink>
+        </Link>
       </div>
     </>
   );
