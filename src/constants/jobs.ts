@@ -2,6 +2,12 @@ import { JobProps } from "@/components/models/job";
 
 export const JOBS: JobProps[] = [
   {
+    location: "Italy, Bari (BA)",
+    role: "Fullstack Developer",
+    company: "Apuliasoft",
+    start: "05/2026",
+  },
+  {
     location: "Italy, Palermo (PA)",
     role: "Backend Developer",
     company: "GIGLIO.COM",

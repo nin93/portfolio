@@ -13,7 +13,7 @@ export default function Me() {
       </section>
 
       <section className="border-background-lighten space-y-8 border-t pt-8 pb-24">
-        <H2>Work Experience</H2>
+        <H2>Work History</H2>
 
         {JOBS.map((props, i) => (
           <Job key={`job_${i}`} className="space-y-2" {...props} />
