@@ -13,7 +13,7 @@ This application is designed to run from Node.js v20 and above.
 Setup locally:
 
 ```sh
-git clone git@github.com:nin93/franzella.dev.git && cd franzella.dev
+git clone git@github.com:blackpastures/franzella.dev.git && cd franzella.dev
 
 npm ci
 ```
@@ -47,6 +47,6 @@ The app is now served at [http://localhost:8080](http://localhost:8080)
 
 ## License
 
-Copyright 2026 [Elia Franzella](https://www.github.com/nin93/)
+Copyright 2026 [Elia Franzella](https://www.github.com/blackpastures/)
 
 This project is [MIT](./LICENSE.md) licensed.

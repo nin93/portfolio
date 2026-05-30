@@ -8,7 +8,7 @@ export default function Footer() {
       <p>© 2026 Elia Franzella. All rights reserved.</p>
 
       <Link
-        href="https://www.github.com/nin93/portfolio"
+        href="https://www.github.com/blackpastures/portfolio"
         className="underline underline-offset-2"
       >
         View source code

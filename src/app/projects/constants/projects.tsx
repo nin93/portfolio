@@ -38,7 +38,7 @@ export const PROJECTS: ProjectProps[] = [
     title: "Alea",
     description:
       "Library to work with most known probability distributions. Features pseudo-random number generator (PRNG) implementations, high-level APIs for repeatable random sampling and cumulative distribution functions (CDF).",
-    href: "https://github.com/nin93/alea",
+    href: "https://github.com/blackpastures/alea",
     tech: [
       {
         label: "Crystal",
@@ -55,7 +55,7 @@ export const PROJECTS: ProjectProps[] = [
     title: "Talgene",
     description:
       "Abstraction layer over genetic algorithm implementations. Fetures auto-iterations over generation advances and built-in genetic cross functions.",
-    href: "https://github.com/nin93/talgene",
+    href: "https://github.com/blackpastures/talgene",
     tech: [
       {
         label: "Crystal",

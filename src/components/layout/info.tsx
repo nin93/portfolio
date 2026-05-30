@@ -46,7 +46,7 @@ export default function Info() {
       </div>
 
       <div className="flex flex-wrap items-center gap-2 text-sm transition-colors md:gap-4 lg:text-base">
-        <Link href="https://www.github.com/nin93/">
+        <Link href="https://www.github.com/blackpastures/">
           <Filled interactive>
             <Github className="fill-foreground w-3" />
             GitHub
